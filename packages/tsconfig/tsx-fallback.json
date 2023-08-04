@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@aei/app/*": ["../../apps/app/*"],
+      "@aei/docs/*": ["../../apps/docs/*"],
+      "@aei/ui/*": ["../../packages/ui/*"]
+    }
+  }
+}

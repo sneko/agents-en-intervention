@@ -1,0 +1,9 @@
+/.files/
+/dist
+/public/assets/fonts/
+# Sentry
+/.sentryclirc
+/sentry.properties
+
+# Legal documents to transform to HTML (with `format-legal-documents.sh`)
+/src/**/*.docx

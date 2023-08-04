@@ -1,0 +1,26 @@
+{
+  "extends": "tsconfig/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@aei/app/*": ["../../apps/app/*"],
+      "@aei/docs/*": ["../../apps/docs/*"],
+      "@aei/ui/*": ["../../packages/ui/*"]
+    },
+    "target": "esnext",
+    "module": "esnext",
+    "strict": true,
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
+    "plugins": [{ "name": "typescript-plugin-css-modules" }]
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

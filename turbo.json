@@ -1,0 +1,78 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", ".next/**"]
+    },
+    "test:prepare": {
+      "outputs": ["coverage/**"],
+      "dependsOn": []
+    },
+    "test:unit": {
+      "outputs": ["coverage/**"],
+      "dependsOn": []
+    },
+    "test:unit:watch": {
+      "outputs": ["coverage/**"],
+      "dependsOn": []
+    },
+    "test:e2e:headless": {
+      "outputs": ["coverage/**"],
+      "dependsOn": []
+    },
+    "lint:prepare": {
+      "outputs": []
+    },
+    "lint": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false
+    },
+    "clean": {
+      "cache": false
+    },
+    "accessibility": {
+      "cache": false
+    },
+    "accessibility:open": {
+      "cache": false
+    },
+    "format": {
+      "cache": false
+    },
+    "format:check": {
+      "cache": false
+    }
+  },
+  "globalEnv": [
+    "APP_BASE_URL",
+    "APP_MODE",
+    "CI",
+    "CONTAINER_VERSION",
+    "DATABASE_URL",
+    "ENABLE_MOCKS",
+    "FILE_AUTH_SECRET",
+    "JEST_WORKER_ID",
+    "NEXT_AUTH_SECRET",
+    "NEXT_PUBLIC_APP_BASE_URL",
+    "NEXT_PUBLIC_APP_MODE",
+    "NEXT_PUBLIC_SENTRY_DSN",
+    "NEXT_PUBLIC_SENTRY_RELEASE",
+    "NEXTAUTH_URL",
+    "NODE_ENV",
+    "npm_package_version",
+    "npm_package_repository_url",
+    "PORT",
+    "SENTRY_DSN",
+    "SENTRY_RELEASE_UPLOAD",
+    "SENTRY_RELEASE_TAG",
+    "SENTRY_URL",
+    "SOURCE_VERSION",
+    "STORYBOOK_ENVIRONMENT",
+    "TEST_MANUAL",
+    "TESTCONTAINERS_RYUK_DISABLED",
+    "TIME_TO_WAIT_AFTER_CHANGING_THEME_MS"
+  ]
+}

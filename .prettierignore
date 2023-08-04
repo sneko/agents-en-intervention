@@ -1,0 +1,8 @@
+/apps/app/.next/
+/apps/app/src/**/*.docx
+/apps/docs/public/mockServiceWorker.js
+/apps/docs/storybook-static/
+**/.dockerignore
+/pnpm-lock.yaml
+/.vscode/i18n-ally-reviews.yml
+/packages/ui/src/animations/**/*.json

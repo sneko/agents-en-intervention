@@ -1,0 +1,14 @@
+{
+  "name": "tsconfig",
+  "version": "0.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sneko/agents-en-intervention.git",
+    "directory": "packages/tsconfig"
+  },
+  "license": "AGPL-3.0",
+  "publishConfig": {
+    "access": "public"
+  }
+}

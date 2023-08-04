@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Default",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@aei/app/*": ["../../apps/app/*"],
+      "@aei/docs/*": ["../../apps/docs/*"],
+      "@aei/ui/*": ["../../packages/ui/*"]
+    },
+    "composite": false,
+    "declaration": false,
+    "declarationMap": false,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveWatchOutput": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strictBindCallApply": true,
+    "strict": true
+  },
+  "exclude": ["node_modules"]
+}
