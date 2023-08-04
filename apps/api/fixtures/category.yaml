@@ -1,0 +1,24 @@
+App\Entity\Category:
+    category (template):
+        __construct: [<text()>, '50%? <text()>', '50%? <text()>']
+        name (unique): <text()>
+        description: '50%? <text()>'
+        picture: '50%? <text()>'
+    category_green_space (extends category):
+        name (unique): "Espaces verts"
+        picture: '/img/catégorie/espaces-verts.png'
+    category_roads (extends category):
+        name (unique): "Voirie"
+        picture: '/img/catégorie/voirie.png'
+    category_rubbish (extends category):
+        name (unique): "Déchets"
+        picture: '/img/catégorie/dechets.png'
+    category_public_equipment (extends category):
+        name (unique): "Equipement public extérieur"
+        picture: '/img/catégorie/equipement-public-exterieur.png'
+    category_public_building (extends category):
+        name (unique): "Bâtiment public"
+        picture: '/img/catégorie/batiment-public.png'
+    category_other (extends category):
+        name (unique): "Autres"
+        picture: '/img/catégorie/autre.png'

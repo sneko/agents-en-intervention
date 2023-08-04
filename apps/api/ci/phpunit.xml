@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.2/phpunit.xsd"
+    bootstrap="../tests/bootstrap.php"
+    cacheDirectory="../var/cache/.phpunit.cache"
+    colors="true"
+    executionOrder="depends,defects"
+    requireCoverageMetadata="true"
+    beStrictAboutChangesToGlobalState="true"
+    beStrictAboutCoverageMetadata="true"
+    beStrictAboutOutputDuringTests="true"
+    beStrictAboutTestsThatDoNotTestAnything="true"
+    failOnIncomplete="true"
+    failOnRisky="true"
+    failOnSkipped="true"
+    failOnWarning="true"
+    testdox="true"
+>
+    <coverage includeUncoveredFiles="true">
+        <report>
+            <html outputDirectory="phpunit/html" />
+        </report>
+    </coverage>
+
+    <extensions>
+        <bootstrap class="DAMA\DoctrineTestBundle\PHPUnit\PHPUnitExtension" />
+    </extensions>
+
+    <logging>
+        <testdoxHtml outputFile="phpunit/testdox.html" />
+    </logging>
+
+    <php>
+        <env name="APP_ENV" value="test" force="true" />
+        <ini name="memory_limit" value="-1" />
+    </php>
+
+    <testsuites>
+        <testsuite name="default">
+            <directory>../tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <source>
+        <include>
+            <directory suffix=".php">../src</directory>
+        </include>
+
+        <exclude>
+            <file>../src/Kernel.php</file>
+        </exclude>
+    </source>
+</phpunit>

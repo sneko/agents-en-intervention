@@ -1,0 +1,21 @@
+alias ls='ls --color=auto -h --group-directories-first'
+alias ll='ls -l'
+alias la='ll -a'
+
+# Données
+alias migrate='cd /var/www/html/ && (./bin/console doctrine:database:create; ./bin/console doctrine:migrations:migrate --no-interaction)'
+alias migratetest='cd /var/www/html/ && rm ./var/app.db ./migrations-test/*.php && ./bin/console doctrine:database:create -e test; ./bin/console make:migration -e test; ./bin/console doctrine:migrations:migrate --no-interaction -e test'
+alias fixture='./bin/console hautelook:fixtures:load -n'
+
+# Outils
+alias hash='./bin/console security:hash-password'
+alias generatekeys='./bin/console lexik:jwt:generate-keypair'
+
+# Intégration continue
+alias psalm='cd /var/www/html/ && ./tools/psalm -c ./ci/psalm.xml --report=./psalm/psalm.txt --output-format=text'
+alias phpunit='migratetest && ./tools/phpunit -c ./ci/phpunit.xml'
+alias infection='phpunit && ./tools/infection -c./ci/infection.json'
+alias phpdoc='cd /var/www/html/ && ./tools/phpDocumentor --config ./ci/phpdoc.xml'
+alias phpcbf='cd /var/www/html/ && ./tools/phpcbf --standard=PSR12 --extensions=php --ignore=./src/Kernel.php,./tests/bootstrap.php -p ./src/ ./tests/'
+alias phpcs='cd /var/www/html/ && ./tools/phpcs --standard=PSR12 --extensions=php --ignore=./src/Kernel.php,./tests/bootstrap.php -p ./src/ ./tests/'
+alias ci='infection; phpdoc; psalm'

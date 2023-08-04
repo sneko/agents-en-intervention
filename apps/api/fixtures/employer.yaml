@@ -1,0 +1,20 @@
+App\Entity\Employer:
+    employer (template):
+        __construct: [<text()>, <name()>, <longitude()>, <latitude()>]
+        siren (unique): <text()>
+        name: <text()>
+        longitude: <longitude(-0.183567, 5.749228)>
+        latitude: <latitude(43.645531, 49.24731)>
+
+    employer_anct (extends employer):
+        siren: 123456789
+        name: ANCT
+        longitude: 2.38603
+        latitude: 48.888467
+    employer_city (extends employer):
+        siren: 987654321
+        name: city
+        longitude: 2.38603
+        latitude: 48.888467
+
+    employer_e{3..10} (extends employer):

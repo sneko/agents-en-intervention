@@ -1,0 +1,85 @@
+App\Entity\Intervention:
+    intervention (template):
+        __construct: [<(new DateTimeImmutable('now'))>, '50%? <text()>', '@status_*', '@priority_*', '@category_*', '@type_*', '@user_*', '@employer_*', '@location_*']
+        createdAt: <(new DateTimeImmutable('now'))>
+        description: '50%? <text()>'
+        status: '@status_*'
+        priority: '@priority_*'
+        category: '@category_*'
+        type: '@type_*'
+        author: '@user_*'
+        employer: '@employer_*'
+        location: '@location_*'
+
+    intervention_director_not_assigned_{1..10} (extends intervention):
+        description: '50%? intervention_director_not_assigned'
+        status: '@status_not_assigned'
+        author: '@user_director'
+        employer: '@employer_city'
+        participants:
+            - '@user_agent'
+            - '@user_agent2'
+    intervention_director_to_do_{11..20} (extends intervention):
+        description: '50%? intervention_director_to_do'
+        status: '@status_to_do'
+        author: '@user_director'
+        employer: '@employer_city'
+        participants:
+            - '@user_agent'
+            - '@user_agent2'
+    intervention_director_in_progress_{21..30} (extends intervention):
+        description: '50%? intervention_director_in_progress'
+        status: '@status_in_progress'
+        author: '@user_director'
+        employer: '@employer_city'
+        participants:
+            - '@user_agent'
+            - '@user_agent2'
+    intervention_director_blocked_{31..40} (extends intervention):
+        description: '50%? intervention_director_blocked'
+        status: '@status_blocked'
+        author: '@user_director'
+        employer: '@employer_city'
+        participants:
+            - '@user_agent'
+            - '@user_agent2'
+    intervention_director_finished_{41..50} (extends intervention):
+        description: '50%? intervention_director_finished'
+        status: '@status_finished'
+        author: '@user_director'
+        employer: '@employer_city'
+        participants:
+            - '@user_agent'
+            - '@user_agent2'
+
+    intervention_agent_not_assigned_{51..60} (extends intervention):
+        description: '50%? intervention_agent_not_assigned'
+        status: '@status_not_assigned'
+        author: '@user_agent'
+        employer: '@employer_city'
+    intervention_agent_to_do_{61..70} (extends intervention):
+        description: '50%? intervention_agent_to_do'
+        status: '@status_to_do'
+        author: '@user_agent'
+        employer: '@employer_city'
+    intervention_agent_in_progress_{71..80} (extends intervention):
+        description: '50%? intervention_agent_in_progress'
+        status: '@status_in_progress'
+        author: '@user_agent'
+        employer: '@employer_city'
+    intervention_agent_blocked_{81..90} (extends intervention):
+        description: '50%? intervention_agent_blocked'
+        status: '@status_blocked'
+        author: '@user_agent'
+        employer: '@employer_city'
+    intervention_agent_finished_{91..100} (extends intervention):
+        description: '50%? intervention_agent_finished'
+        status: '@status_finished'
+        author: '@user_agent'
+        employer: '@employer_city'
+
+    intervention_{101..110} (extends intervention):
+        author: '@user_director_*'
+        employer: '@employer_e*'
+        participants:
+            - '@user_agent_*'

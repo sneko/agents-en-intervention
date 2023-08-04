@@ -1,0 +1,12 @@
+App\Entity\PictureTag:
+    pictureTag (template):
+        __construct: [<text()>, <text()>]
+        name (unique): <text()>
+        slug (unique): <text()>
+
+    pictureTag_before (extends pictureTag):
+        name (unique): "Avant"
+        slug (unique): "before"
+    pictureTag_after (extends pictureTag):
+        name (unique): "Après"
+        slug (unique): "after"

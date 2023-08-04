@@ -1,0 +1,7 @@
+App\Entity\Comment:
+    comment_{1..10}:
+        __construct: [<text()>, <(new DateTimeImmutable('now'))>, '@user_*', '@intervention_*']
+        message: <text()>
+        createdAt: <(new DateTimeImmutable('now'))>
+        author: '@user_*'
+        intervention: '@intervention_*'

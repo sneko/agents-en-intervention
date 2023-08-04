@@ -1,0 +1,12 @@
+App\Entity\Priority:
+    priority (template):
+        __construct: [<text()>, <text()>]
+        name (unique): <text()>
+        slug (unique): <text()>
+
+    priority_normal (extends priority):
+        name (unique): "Normal"
+        slug (unique): "normal"
+    priority_urgent (extends priority):
+        name (unique): "Urgent"
+        slug (unique): "urgent"

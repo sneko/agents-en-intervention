@@ -1,0 +1,9 @@
+App\Entity\Location:
+    location_{1..100}:
+        __construct: ['50%? <streetName()>', '50%? <buildingNumber()>', '50%? <postcode()>', '50%? <city()>', <longitude()>, <latitude()>]
+        street: '50%? <streetName()>'
+        rest: '50%? <buildingNumber()>'
+        postcode: '50%? <postcode()>'
+        city: '50%? <city()>'
+        longitude: <longitude(2.36, 2.41)>
+        latitude: <latitude(48.873, 48.905)>

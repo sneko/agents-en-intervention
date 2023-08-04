@@ -1,0 +1,47 @@
+App\Entity\Role:
+    role (template):
+        __construct: [<name()>, '50%? <text()>']
+        name (unique): <text()>
+        description: '50%? <text()>'
+
+    # Rôles génériques :
+    role_agent (extends role):
+        name (unique): 'ROLE_AGENT'
+        description: Le rôle d'agent.
+    role_director (extends role):
+        name (unique): 'ROLE_DIRECTOR'
+        description: Le rôle de directeur.
+    role_elected (extends role):
+        name (unique): 'ROLE_ELECTED'
+        description: Le rôle d'élu.
+
+    role_interventions_post (extends role):
+        name (unique): 'ROLE_INTERVENTIONS_POST'
+    role_interventions_patch (extends role):
+        name (unique): 'ROLE_INTERVENTIONS_PATCH'
+
+    role_read_assigned_to_me_interventions (extends role):
+        name (unique): 'ROLE_READ_ASSIGNED_TO_ME_INTERVENTIONS'
+        description: Pour qu'un agent voit les interventions qui lui sont assignées.
+
+    # Directeurs et élus
+    role_read_employer_interventions (extends role):
+        name (unique): 'ROLE_READ_EMPLOYER_INTERVENTIONS'
+        description: Pour voir les interventions.
+
+    # Directeurs
+    role_get_active_agents (extends role):
+        name (unique): 'ROLE_GET_ACTIVE_AGENTS'
+        description: Pour accéder à la liste des agents actifs.
+
+    role_add_participants_to_intervention (extends role):
+        name (unique): 'ROLE_ADD_PARTICIPANTS_TO_INTERVENTION'
+        description: Pour ajouter des participants à une intervention.
+
+    role_delete_intervention (extends role):
+        name (unique): 'ROLE_DELETE_INTERVENTION'
+        description: Pour supprimer une intervention.
+
+    role_get_users (extends role):
+        name (unique): 'ROLE_GET_USERS'
+        description: Pour accéder à la liste des utilisateurs d'une collectivité.

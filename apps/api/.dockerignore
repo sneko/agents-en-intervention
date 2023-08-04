@@ -1,0 +1,11 @@
+.env*
+Dockerfile*
+.dockerignore
+var/
+vendor/
+tests/
+fixtures/
+ci/
+.phive/
+migrations-test/
+public/bundles

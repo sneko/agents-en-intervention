@@ -1,0 +1,169 @@
+App\Entity\Type:
+    type (template):
+        __construct: [<text()>, '50%? <text()>', '50%? <text()>', '@category_*']
+        name: <text()>
+        description: '50%? <text()>'
+        picture: '50%? <text()>'
+        category: '@category_*'
+
+    type_weeding (extends type):
+        name: "Désherbage"
+        picture: '/img/catégorie/espaces-verts/desherbage.png'
+        category: '@category_green_space'
+    type_lawn_maintenance (extends type):
+        name: "Entretien pelouse"
+        picture: '/img/catégorie/espaces-verts/entretien-pelouse.png'
+        category: '@category_green_space'
+    type_collecting (extends type):
+        name: "Ramassage"
+        picture: '/img/catégorie/espaces-verts/ramassage.png'
+        category: '@category_green_space'
+    type_cut (extends type):
+        name: "Taille"
+        picture: '/img/catégorie/espaces-verts/taille.png'
+        category: '@category_green_space'
+    type_pruning (extends type):
+        name: "Élaguage"
+        picture: '/img/catégorie/espaces-verts/elaguage.png'
+        category: '@category_green_space'
+    type_fertilizer (extends type):
+        name: "Engrais"
+        picture: '/img/catégorie/espaces-verts/engrais.png'
+        category: '@category_green_space'
+    type_other_green_space (extends type):
+        name: "Autres"
+        picture: '/img/catégorie/espaces-verts/autre.png'
+        category: '@category_green_space'
+
+    type_roads_cleaning (extends type):
+        name: "Nettoyage"
+        picture: '/img/catégorie/voirie/nettoyage.png'
+        category: '@category_roads'
+    type_road_repair (extends type):
+        name: "Réparation chaussée"
+        picture: '/img/catégorie/voirie/reparation-chaussee.png'
+        category: '@category_roads'
+    type_road_obstacle (extends type):
+        name: "Obstacle voirie"
+        picture: '/img/catégorie/voirie/obstacle-voirie.png'
+        category: '@category_roads'
+    type_drainage_grid (extends type):
+        name: "Grille évacuation"
+        picture: '/img/catégorie/voirie/grille-evacuation.png'
+        category: '@category_roads'
+    type_signage (extends type):
+        name: "Signalétique"
+        picture: '/img/catégorie/voirie/signaletique.png'
+        category: '@category_roads'
+    type_pavement_maintenance (extends type):
+        name: "Entretien Trottoir"
+        picture: '/img/catégorie/voirie/entretien-trottoir.png'
+        category: '@category_roads'
+    type_other_road (extends type):
+        name: "Autres"
+        picture: '/img/catégorie/voirie/autre.png'
+        category: '@category_roads'
+
+    type_rubbish_clear_out (extends type):
+        name: "Vider poubelle"
+        picture: '/img/catégorie/dechets/vider-poubelle.png'
+        category: '@category_rubbish'
+    type_sorting_space_cleaning (extends type):
+        name: "Nettoyer espace de tri"
+        picture: '/img/catégorie/dechets/nettoyer-espace-tri.png'
+        category: '@category_rubbish'
+    type_equipment_maintenance (extends type):
+        name: "Entretien équipement"
+        picture: '/img/catégorie/dechets/entretien-equipement.png'
+        category: '@category_rubbish'
+    type_illegal_waste_dumping (extends type):
+        name: "Dépôt sauvage"
+        picture: '/img/catégorie/dechets/depot-sauvage.png'
+        category: '@category_rubbish'
+    type_other_rubbish (extends type):
+        name: "Autres"
+        picture: '/img/catégorie/dechets/autre.png'
+        category: '@category_rubbish'
+
+    type_public_equipment_cleaning (extends type):
+        name: "Nettoyage"
+        picture: '/img/catégorie/equipements-public-exterieur/nettoyage.png'
+        category: '@category_public_equipment'
+    type_tags (extends type):
+        name: "Tags"
+        picture: '/img/catégorie/equipements-public-exterieur/tags.png'
+        category: '@category_public_equipment'
+    type_fly_posting (extends type):
+        name: "Affichage sauvage"
+        picture: '/img/catégorie/equipements-public-exterieur/affichage-sauvage.png'
+        category: '@category_public_equipment'
+    type_equipment_lights (extends type):
+        name: "Luminaires"
+        picture: '/img/catégorie/equipements-public-exterieur/luminaire.png'
+        category: '@category_public_equipment'
+    type_bus_shelter_maintenance (extends type):
+        name: "Entretien abribus"
+        picture: '/img/catégorie/equipements-public-exterieur/entretien-abribus.png'
+        category: '@category_public_equipment'
+    type_bench_maintenance (extends type):
+        name: "Entretien bancs"
+        picture: '/img/catégorie/equipements-public-exterieur/entretien-banc.png'
+        category: '@category_public_equipment'
+    type_playground_maintenance (extends type):
+        name: "Entretien Aire de jeux"
+        picture: '/img/catégorie/equipements-public-exterieur/entretien-aire-jeux.png'
+        category: '@category_public_equipment'
+    type_playgroung_security (extends type):
+        name: "Sécurité Aire de jeux"
+        picture: '/img/catégorie/equipements-public-exterieur/securite-aire-jeux.png'
+        category: '@category_public_equipment'
+    type_other_outside_public_equipment (extends type):
+        name: "Autres"
+        picture: '/img/catégorie/equipements-public-exterieur/autre.png'
+        category: '@category_public_equipment'
+
+    type_building_lights (extends type):
+        name: "Éclairage"
+        picture: '/img/catégorie/batiment-public/eclairage.png'
+        category: '@category_public_building'
+    type_electricity (extends type):
+        name: "Electricité"
+        picture: '/img/catégorie/batiment-public/electricite.png'
+        category: '@category_public_building'
+    type_locksmithing (extends type):
+        name: "Serrurerie"
+        picture: '/img/catégorie/batiment-public/serrurerie.png'
+        category: '@category_public_building'
+    type_carpentry (extends type):
+        name: "Menuiserie"
+        picture: '/img/catégorie/batiment-public/menuiserie.png'
+        category: '@category_public_building'
+    type_masonry (extends type):
+        name: "Maçonnerie"
+        picture: '/img/catégorie/batiment-public/maconnerie.png'
+        category: '@category_public_building'
+    type_paint (extends type):
+        name: "Peinture"
+        picture: '/img/catégorie/batiment-public/peinture.png'
+        category: '@category_public_building'
+    type_plumbing (extends type):
+        name: "Plomberie"
+        picture: '/img/catégorie/batiment-public/plomberie.png'
+        category: '@category_public_building'
+    type_fire_security (extends type):
+        name: "Sécurité incendie"
+        picture: '/img/catégorie/batiment-public/securite-incendie.png'
+        category: '@category_public_building'
+    type_public_building_cleaning (extends type):
+        name: "Nettoyage"
+        picture: '/img/catégorie/batiment-public/nettoyage.png'
+        category: '@category_public_building'
+    type_other_public_building (extends type):
+        name: "Autres"
+        picture: '/img/catégorie/batiment-public/autre.png'
+        category: '@category_public_building'
+
+    type_other_other (extends type):
+        name: "Autres"
+        picture: '/img/catégorie/autre.png'
+        category: '@category_other'
