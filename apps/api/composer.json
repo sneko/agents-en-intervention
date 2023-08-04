@@ -81,7 +81,8 @@
     ],
     "post-update-cmd": [
       "@auto-scripts"
-    ]
+    ],
+    "generate-openapi-schema": "APP_ENV=prod php bin/console api:openapi:export -o openapi.json"
   },
   "conflict": {
     "symfony/symfony": "*"

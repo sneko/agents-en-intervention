@@ -56,6 +56,9 @@ accessibility-open:
 deps:
 	pnpm install
 
+sync-api-chema:
+	composer --working-dir=apps/api run-script generate-openapi-schema && cd apps/app && npx openapi-codegen gen apiClient
+
 tools-up:
 	docker-compose up -d
 

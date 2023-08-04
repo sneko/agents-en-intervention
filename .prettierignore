@@ -1,4 +1,5 @@
 /apps/app/.next/
+/apps/app/src/client/generated/
 /apps/app/src/**/*.docx
 /apps/api/composer.lock
 /apps/api/openapi.json

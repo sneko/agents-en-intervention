@@ -21,6 +21,7 @@
 /tools/
 /.ashrc
 /.env
+/openapi.json
 
 ###> friendsofphp/php-cs-fixer ###
 /.php-cs-fixer.php
