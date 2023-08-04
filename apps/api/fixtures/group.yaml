@@ -1,37 +1,37 @@
 App\Entity\Group:
-    group (template):
-        __construct: [<name()>, <slug()>, '50%? <text()>']
-        name (unique): <text()>
-        slug (unique): <text()>
+  group (template):
+    __construct: [<name()>, <slug()>, '50%? <text()>']
+    name (unique): <text()>
+    slug (unique): <text()>
 
-    group_director (extends group):
-        name (unique): "Directeur"
-        slug (unique): "director"
-        description: Le groupe directeur.
-        roles:
-            - '@role_director'
-            - '@role_interventions_post'
-            - '@role_interventions_patch'
-            - '@role_get_active_agents'
-            - '@role_add_participants_to_intervention'
-            - '@role_read_employer_interventions'
-            - '@role_delete_intervention'
-            - '@role_get_users'
+  group_director (extends group):
+    name (unique): 'Directeur'
+    slug (unique): 'director'
+    description: Le groupe directeur.
+    roles:
+      - '@role_director'
+      - '@role_interventions_post'
+      - '@role_interventions_patch'
+      - '@role_get_active_agents'
+      - '@role_add_participants_to_intervention'
+      - '@role_read_employer_interventions'
+      - '@role_delete_intervention'
+      - '@role_get_users'
 
-    group_agent (extends group):
-        name (unique): "Agent"
-        slug (unique): "agent"
-        description: Le groupe agent.
-        roles:
-            - '@role_agent'
-            - '@role_interventions_patch'
-            - '@role_interventions_post'
-            - '@role_read_assigned_to_me_interventions'
+  group_agent (extends group):
+    name (unique): 'Agent'
+    slug (unique): 'agent'
+    description: Le groupe agent.
+    roles:
+      - '@role_agent'
+      - '@role_interventions_patch'
+      - '@role_interventions_post'
+      - '@role_read_assigned_to_me_interventions'
 
-    group_elected (extends group):
-        name (unique): "Élu"
-        slug (unique): "elected"
-        description: Le groupe élu.
-        roles:
-            - '@role_elected'
-            - '@role_read_employer_interventions'
+  group_elected (extends group):
+    name (unique): 'Élu'
+    slug (unique): 'elected'
+    description: Le groupe élu.
+    roles:
+      - '@role_elected'
+      - '@role_read_employer_interventions'

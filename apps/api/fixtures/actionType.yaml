@@ -1,82 +1,82 @@
 App\Entity\ActionType:
-    actionType (template):
-        __construct: [<text()>, '50%? <text()>', '@type_*']
-        name: <text()>
-        description: '50%? <text()>'
-        type: '@type_*'
-    actionType_other_weeding (extends actionType):
-        type: '@type_weeding'
-    actionType_other_lawn_maintenance (extends actionType):
-        type: '@type_lawn_maintenance'
-    actionType_other_collecting (extends actionType):
-        type: '@type_collecting'
-    actionType_other_cut (extends actionType):
-        type: '@type_cut'
-    actionType_other_pruning (extends actionType):
-        type: '@type_pruning'
-    actionType_other_fertilizer (extends actionType):
-        type: '@type_fertilizer'
-    actionType_other_other_green_space (extends actionType):
-        type: '@type_other_green_space'
-    actionType_other_roads_cleaning (extends actionType):
-        type: '@type_roads_cleaning'
-    actionType_other_road_repair (extends actionType):
-        type: '@type_road_repair'
-    actionType_other_road_obstacle (extends actionType):
-        type: '@type_road_obstacle'
-    actionType_other_drainage_grid (extends actionType):
-        type: '@type_drainage_grid'
-    actionType_other_signage (extends actionType):
-        type: '@type_signage'
-    actionType_other_pavement_maintenance (extends actionType):
-        type: '@type_pavement_maintenance'
-    actionType_other_other_road (extends actionType):
-        type: '@type_other_road'
-    actionType_other_rubbish_clear_out (extends actionType):
-        type: '@type_rubbish_clear_out'
-    actionType_other_sorting_space_cleaning (extends actionType):
-        type: '@type_sorting_space_cleaning'
-    actionType_other_equipment_maintenance (extends actionType):
-        type: '@type_equipment_maintenance'
-    actionType_other_illegal_waste_dumping (extends actionType):
-        type: '@type_illegal_waste_dumping'
-    actionType_other_other_rubbish (extends actionType):
-        type: '@type_other_rubbish'
-    actionType_other_public_equipment_cleaning (extends actionType):
-        type: '@type_public_equipment_cleaning'
-    actionType_other_tags (extends actionType):
-        type: '@type_tags'
-    actionType_other_fly_posting (extends actionType):
-        type: '@type_fly_posting'
-    actionType_other_equipment_lights (extends actionType):
-        type: '@type_equipment_lights'
-    actionType_other_bus_shelter_maintenance (extends actionType):
-        type: '@type_bus_shelter_maintenance'
-    actionType_other_bench_maintenance (extends actionType):
-        type: '@type_bench_maintenance'
-    actionType_other_playground_maintenance (extends actionType):
-        type: '@type_playground_maintenance'
-    actionType_other_playgroung_security (extends actionType):
-        type: '@type_playgroung_security'
-    actionType_other_other_outside_public_equipment (extends actionType):
-        type: '@type_other_outside_public_equipment'
-    actionType_other_building_lights (extends actionType):
-        type: '@type_building_lights'
-    actionType_other_electricity (extends actionType):
-        type: '@type_electricity'
-    actionType_other_locksmithing (extends actionType):
-        type: '@type_locksmithing'
-    actionType_other_carpentry (extends actionType):
-        type: '@type_carpentry'
-    actionType_other_masonry (extends actionType):
-        type: '@type_masonry'
-    actionType_other_paint (extends actionType):
-        type: '@type_paint'
-    actionType_other_plumbing (extends actionType):
-        type: '@type_plumbing'
-    actionType_other_fire_security (extends actionType):
-        type: '@type_fire_security'
-    actionType_other_other_public_building (extends actionType):
-        type: '@type_other_public_building'
-    actionType_other_other_other (extends actionType):
-        type: '@type_other_other'
+  actionType (template):
+    __construct: [<text()>, '50%? <text()>', '@type_*']
+    name: <text()>
+    description: '50%? <text()>'
+    type: '@type_*'
+  actionType_other_weeding (extends actionType):
+    type: '@type_weeding'
+  actionType_other_lawn_maintenance (extends actionType):
+    type: '@type_lawn_maintenance'
+  actionType_other_collecting (extends actionType):
+    type: '@type_collecting'
+  actionType_other_cut (extends actionType):
+    type: '@type_cut'
+  actionType_other_pruning (extends actionType):
+    type: '@type_pruning'
+  actionType_other_fertilizer (extends actionType):
+    type: '@type_fertilizer'
+  actionType_other_other_green_space (extends actionType):
+    type: '@type_other_green_space'
+  actionType_other_roads_cleaning (extends actionType):
+    type: '@type_roads_cleaning'
+  actionType_other_road_repair (extends actionType):
+    type: '@type_road_repair'
+  actionType_other_road_obstacle (extends actionType):
+    type: '@type_road_obstacle'
+  actionType_other_drainage_grid (extends actionType):
+    type: '@type_drainage_grid'
+  actionType_other_signage (extends actionType):
+    type: '@type_signage'
+  actionType_other_pavement_maintenance (extends actionType):
+    type: '@type_pavement_maintenance'
+  actionType_other_other_road (extends actionType):
+    type: '@type_other_road'
+  actionType_other_rubbish_clear_out (extends actionType):
+    type: '@type_rubbish_clear_out'
+  actionType_other_sorting_space_cleaning (extends actionType):
+    type: '@type_sorting_space_cleaning'
+  actionType_other_equipment_maintenance (extends actionType):
+    type: '@type_equipment_maintenance'
+  actionType_other_illegal_waste_dumping (extends actionType):
+    type: '@type_illegal_waste_dumping'
+  actionType_other_other_rubbish (extends actionType):
+    type: '@type_other_rubbish'
+  actionType_other_public_equipment_cleaning (extends actionType):
+    type: '@type_public_equipment_cleaning'
+  actionType_other_tags (extends actionType):
+    type: '@type_tags'
+  actionType_other_fly_posting (extends actionType):
+    type: '@type_fly_posting'
+  actionType_other_equipment_lights (extends actionType):
+    type: '@type_equipment_lights'
+  actionType_other_bus_shelter_maintenance (extends actionType):
+    type: '@type_bus_shelter_maintenance'
+  actionType_other_bench_maintenance (extends actionType):
+    type: '@type_bench_maintenance'
+  actionType_other_playground_maintenance (extends actionType):
+    type: '@type_playground_maintenance'
+  actionType_other_playgroung_security (extends actionType):
+    type: '@type_playgroung_security'
+  actionType_other_other_outside_public_equipment (extends actionType):
+    type: '@type_other_outside_public_equipment'
+  actionType_other_building_lights (extends actionType):
+    type: '@type_building_lights'
+  actionType_other_electricity (extends actionType):
+    type: '@type_electricity'
+  actionType_other_locksmithing (extends actionType):
+    type: '@type_locksmithing'
+  actionType_other_carpentry (extends actionType):
+    type: '@type_carpentry'
+  actionType_other_masonry (extends actionType):
+    type: '@type_masonry'
+  actionType_other_paint (extends actionType):
+    type: '@type_paint'
+  actionType_other_plumbing (extends actionType):
+    type: '@type_plumbing'
+  actionType_other_fire_security (extends actionType):
+    type: '@type_fire_security'
+  actionType_other_other_public_building (extends actionType):
+    type: '@type_other_public_building'
+  actionType_other_other_other (extends actionType):
+    type: '@type_other_other'

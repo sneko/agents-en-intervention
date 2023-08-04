@@ -1,5 +1,8 @@
 /apps/app/.next/
 /apps/app/src/**/*.docx
+/apps/api/composer.lock
+/apps/api/openapi.json
+/apps/api/symfony.lock
 /apps/docs/public/mockServiceWorker.js
 /apps/docs/storybook-static/
 **/.dockerignore

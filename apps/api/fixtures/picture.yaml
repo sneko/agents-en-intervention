@@ -1,74 +1,71 @@
 App\Entity\Picture:
-    picture (template):
-        __construct: [<text()>, '@intervention_*', <(new DateTimeImmutable('now'))>]
-        createdAt: <(new DateTimeImmutable('now'))>
+  picture (template):
+    __construct: [<text()>, '@intervention_*', <(new DateTimeImmutable('now'))>]
+    createdAt: <(new DateTimeImmutable('now'))>
 
+  picture_director_not_assigned_avant_{1..7} (extends picture):
+    fileName (unique): 'interventions/<current()>-avant.png'
+    intervention: '@intervention_director_not_assigned_<current()>'
+    tags: ['@pictureTag_before']
 
-    picture_director_not_assigned_avant_{1..7} (extends picture):
-        fileName (unique): 'interventions/<current()>-avant.png'
-        intervention: '@intervention_director_not_assigned_<current()>'
-        tags: ['@pictureTag_before']
+  picture_director_to_do_avant_{11..17} (extends picture):
+    fileName (unique): 'interventions/<current()>-avant.png'
+    intervention: '@intervention_director_to_do_<current()>'
+    tags: ['@pictureTag_before']
 
-    picture_director_to_do_avant_{11..17} (extends picture):
-        fileName (unique): 'interventions/<current()>-avant.png'
-        intervention: '@intervention_director_to_do_<current()>'
-        tags: ['@pictureTag_before']
+  picture_director_in_progress_avant_{21..27} (extends picture):
+    fileName (unique): 'interventions/<current()>-avant.png'
+    intervention: '@intervention_director_in_progress_<current()>'
+    tags: ['@pictureTag_before']
 
-    picture_director_in_progress_avant_{21..27} (extends picture):
-        fileName (unique): 'interventions/<current()>-avant.png'
-        intervention: '@intervention_director_in_progress_<current()>'
-        tags: ['@pictureTag_before']
+  picture_director_blocked_avant_{31..37} (extends picture):
+    fileName (unique): 'interventions/<current()>-avant.png'
+    intervention: '@intervention_director_blocked_<current()>'
+    tags: ['@pictureTag_before']
 
-    picture_director_blocked_avant_{31..37} (extends picture):
-        fileName (unique): 'interventions/<current()>-avant.png'
-        intervention: '@intervention_director_blocked_<current()>'
-        tags: ['@pictureTag_before']
+  picture_director_finished_avant_{41..47} (extends picture):
+    fileName (unique): 'interventions/<current()>-avant.png'
+    intervention: '@intervention_director_finished_<current()>'
+    tags: ['@pictureTag_before']
+  picture_director_finished_après_{41..47} (extends picture):
+    fileName (unique): 'interventions/<current()>-après.png'
+    intervention: '@intervention_director_finished_<current()>'
+    tags: ['@pictureTag_after']
 
-    picture_director_finished_avant_{41..47} (extends picture):
-        fileName (unique): 'interventions/<current()>-avant.png'
-        intervention: '@intervention_director_finished_<current()>'
-        tags: ['@pictureTag_before']
-    picture_director_finished_après_{41..47} (extends picture):
-        fileName (unique): 'interventions/<current()>-après.png'
-        intervention: '@intervention_director_finished_<current()>'
-        tags: ['@pictureTag_after']
+  picture_agent_not_assigned_avant_{51..57} (extends picture):
+    fileName (unique): 'interventions/<current()>-avant.png'
+    intervention: '@intervention_agent_not_assigned_<current()>'
+    tags: ['@pictureTag_before']
 
+  picture_agent_to_do_avant_{61..67} (extends picture):
+    fileName (unique): 'interventions/<current()>-avant.png'
+    intervention: '@intervention_agent_to_do_<current()>'
+    tags: ['@pictureTag_before']
 
-    picture_agent_not_assigned_avant_{51..57} (extends picture):
-        fileName (unique): 'interventions/<current()>-avant.png'
-        intervention: '@intervention_agent_not_assigned_<current()>'
-        tags: ['@pictureTag_before']
+  picture_agent_in_progress_avant_{71..77} (extends picture):
+    fileName (unique): 'interventions/<current()>-avant.png'
+    intervention: '@intervention_agent_in_progress_<current()>'
+    tags: ['@pictureTag_before']
 
-    picture_agent_to_do_avant_{61..67} (extends picture):
-        fileName (unique): 'interventions/<current()>-avant.png'
-        intervention: '@intervention_agent_to_do_<current()>'
-        tags: ['@pictureTag_before']
+  picture_agent_blocked_avant_{81..87} (extends picture):
+    fileName (unique): 'interventions/<current()>-avant.png'
+    intervention: '@intervention_agent_blocked_<current()>'
+    tags: ['@pictureTag_before']
 
-    picture_agent_in_progress_avant_{71..77} (extends picture):
-        fileName (unique): 'interventions/<current()>-avant.png'
-        intervention: '@intervention_agent_in_progress_<current()>'
-        tags: ['@pictureTag_before']
+  picture_agent_finished_avant_{91..97} (extends picture):
+    fileName (unique): 'interventions/<current()>-avant.png'
+    intervention: '@intervention_agent_finished_<current()>'
+    tags: ['@pictureTag_before']
+  picture_agent_finished_après_{91..97} (extends picture):
+    fileName (unique): 'interventions/<current()>-après.png'
+    intervention: '@intervention_agent_finished_<current()>'
+    tags: ['@pictureTag_after']
 
-    picture_agent_blocked_avant_{81..87} (extends picture):
-        fileName (unique): 'interventions/<current()>-avant.png'
-        intervention: '@intervention_agent_blocked_<current()>'
-        tags: ['@pictureTag_before']
-
-    picture_agent_finished_avant_{91..97} (extends picture):
-        fileName (unique): 'interventions/<current()>-avant.png'
-        intervention: '@intervention_agent_finished_<current()>'
-        tags: ['@pictureTag_before']
-    picture_agent_finished_après_{91..97} (extends picture):
-        fileName (unique): 'interventions/<current()>-après.png'
-        intervention: '@intervention_agent_finished_<current()>'
-        tags: ['@pictureTag_after']
-
-
-    picture_avant_{101..107} (extends picture):
-        fileName (unique): 'interventions/<current()>-avant.png'
-        intervention: '@intervention_<current()>'
-        tags: '<numberBetween(1, 2)>x @pictureTag_*'
-    picture_après_{101..107} (extends picture):
-        fileName (unique): 'interventions/<current()>-après.png'
-        intervention: '@intervention_<current()>'
-        tags: '<numberBetween(1, 2)>x @pictureTag_*'
+  picture_avant_{101..107} (extends picture):
+    fileName (unique): 'interventions/<current()>-avant.png'
+    intervention: '@intervention_<current()>'
+    tags: '<numberBetween(1, 2)>x @pictureTag_*'
+  picture_après_{101..107} (extends picture):
+    fileName (unique): 'interventions/<current()>-après.png'
+    intervention: '@intervention_<current()>'
+    tags: '<numberBetween(1, 2)>x @pictureTag_*'

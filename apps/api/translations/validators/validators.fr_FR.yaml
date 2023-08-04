@@ -1,9 +1,9 @@
 location:
-    city.maxLength: Le nom de la ville ne doit pas être plus long que {{ limit }} caractères.
-    latitude:
-        notInRange: La latitude doit être comprise entre {{ min }} et {{ max }}.
-    longitude:
-        notInRange: La longitude doit être comprise entre {{ min }} et {{ max }}.
-    postcode: Le code postal doit être constitué de 5 chiffres.
-    rest.maxLength: Le complément d'adresse ne doit pas être plus long que {{ limit }} caractères.
-    street.maxLength: Le nom de la rue ne doit pas être plus long que {{ limit }} caractères.
+  city.maxLength: Le nom de la ville ne doit pas être plus long que {{ limit }} caractères.
+  latitude:
+    notInRange: La latitude doit être comprise entre {{ min }} et {{ max }}.
+  longitude:
+    notInRange: La longitude doit être comprise entre {{ min }} et {{ max }}.
+  postcode: Le code postal doit être constitué de 5 chiffres.
+  rest.maxLength: Le complément d'adresse ne doit pas être plus long que {{ limit }} caractères.
+  street.maxLength: Le nom de la rue ne doit pas être plus long que {{ limit }} caractères.

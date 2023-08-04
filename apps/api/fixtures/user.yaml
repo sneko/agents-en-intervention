@@ -1,66 +1,80 @@
 App\Entity\User:
-    user (template):
-        __construct: [<text()>, <text()>, <firstName()>, <lastName()>, '50%? <email()>', '50%? <phoneNumber()>', <(new DateTimeImmutable('now'))>, '50%? <text()>', '@employer_*', true, '50%? <(new DateTimeImmutable("now"))>', '<numberBetween(1, 3)>x @group_*']
-        login: <text()>
-        password: <text()>
-        firstname: <firstName()>
-        lastname: <lastName()>
-        email: '50%? <email()>'
-        phoneNumber: '50%? <phoneNumber()>'
-        createdAt: <(new DateTimeImmutable('now'))>
-        picture: '50%? <text()>'
-        employer: '@employer_e*'
-        active: <boolean()>
-        connectedAt: '50%? <(new DateTimeImmutable("now"))>'
+  user (template):
+    __construct:
+      [
+        <text()>,
+        <text()>,
+        <firstName()>,
+        <lastName()>,
+        '50%? <email()>',
+        '50%? <phoneNumber()>',
+        <(new DateTimeImmutable('now'))>,
+        '50%? <text()>',
+        '@employer_*',
+        true,
+        '50%? <(new DateTimeImmutable("now"))>',
+        '<numberBetween(1, 3)>x @group_*',
+      ]
+    login: <text()>
+    password: <text()>
+    firstname: <firstName()>
+    lastname: <lastName()>
+    email: '50%? <email()>'
+    phoneNumber: '50%? <phoneNumber()>'
+    createdAt: <(new DateTimeImmutable('now'))>
+    picture: '50%? <text()>'
+    employer: '@employer_e*'
+    active: <boolean()>
+    connectedAt: '50%? <(new DateTimeImmutable("now"))>'
 
-    user_director (extends user):
-        login: "directeur"
-        password: '\$2y\$13\$8JEdDrntbk4IbEJv9sbjMuvU5eRW8drCN2UrD1nma140jCmm7KX2S'
-        employer: '@employer_city'
-        active: true
-        groups: ['@group_director']
-    user_agent (extends user):
-        login: "agent"
-        password: '\$2y\$13\$Ky10pjTFWaDzf0IacxcWRenG33NPfKzqbGnklLYqCvUl7gT.WPU2a'
-        email: '<email()>'
-        phoneNumber: '<phoneNumber()>'
-        picture: '<text()>'
-        employer: '@employer_city'
-        active: true
-        groups: ['@group_agent']
-    user_agent2 (extends user):
-        login: "agent2"
-        password: '\$2y\$13\$Ky10pjTFWaDzf0IacxcWRenG33NPfKzqbGnklLYqCvUl7gT.WPU2a'
-        email: ~
-        phoneNumber: ~
-        picture: ~
-        employer: '@employer_city'
-        active: true
-        groups: ['@group_agent']
+  user_director (extends user):
+    login: 'directeur'
+    password: '\$2y\$13\$8JEdDrntbk4IbEJv9sbjMuvU5eRW8drCN2UrD1nma140jCmm7KX2S'
+    employer: '@employer_city'
+    active: true
+    groups: ['@group_director']
+  user_agent (extends user):
+    login: 'agent'
+    password: '\$2y\$13\$Ky10pjTFWaDzf0IacxcWRenG33NPfKzqbGnklLYqCvUl7gT.WPU2a'
+    email: '<email()>'
+    phoneNumber: '<phoneNumber()>'
+    picture: '<text()>'
+    employer: '@employer_city'
+    active: true
+    groups: ['@group_agent']
+  user_agent2 (extends user):
+    login: 'agent2'
+    password: '\$2y\$13\$Ky10pjTFWaDzf0IacxcWRenG33NPfKzqbGnklLYqCvUl7gT.WPU2a'
+    email: ~
+    phoneNumber: ~
+    picture: ~
+    employer: '@employer_city'
+    active: true
+    groups: ['@group_agent']
 
-    user_deactivated_agent (extends user):
-        login: "deactivated"
-        password: '\$2y\$13\$oaDpgU3lrEw98L3otG4F/OEorGRH4VQMpuFlBtmu5vX7pBUvwSbrq'
-        employer: '@employer_city'
-        active: false
-        groups: ['@group_agent']
+  user_deactivated_agent (extends user):
+    login: 'deactivated'
+    password: '\$2y\$13\$oaDpgU3lrEw98L3otG4F/OEorGRH4VQMpuFlBtmu5vX7pBUvwSbrq'
+    employer: '@employer_city'
+    active: false
+    groups: ['@group_agent']
 
-    user_elected (extends user):
-        login: "élu"
-        password: '\$2y\$13\$aQH9q/.AU5aKZg1OBGoiqeh9iR1GjwCotR4vN/EOUQufL5NLhvvsy'
-        employer: '@employer_city'
-        active: true
-        groups: ['@group_elected']
+  user_elected (extends user):
+    login: 'élu'
+    password: '\$2y\$13\$aQH9q/.AU5aKZg1OBGoiqeh9iR1GjwCotR4vN/EOUQufL5NLhvvsy'
+    employer: '@employer_city'
+    active: true
+    groups: ['@group_elected']
 
-    user_director_{1..3} (extends user):
-        employer: '@employer_e*'
-        active: true
-        groups: ['@group_director']
-    user_agent_{1..3} (extends user):
-        employer: '@employer_e*'
-        active: true
-        groups: ['@group_agent']
-    user_elected{1..3} (extends user):
-        employer: '@employer_e*'
-        active: true
-        groups: ['@group_elected']
+  user_director_{1..3} (extends user):
+    employer: '@employer_e*'
+    active: true
+    groups: ['@group_director']
+  user_agent_{1..3} (extends user):
+    employer: '@employer_e*'
+    active: true
+    groups: ['@group_agent']
+  user_elected{1..3} (extends user):
+    employer: '@employer_e*'
+    active: true
+    groups: ['@group_elected']

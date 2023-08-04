@@ -1,26 +1,26 @@
 App\Entity\Status:
-    status (template):
-        __construct: [<text()>, <text()>, '50%? <text()>']
-        name (unique): <text()>
-        slug (unique): <text()>
+  status (template):
+    __construct: [<text()>, <text()>, '50%? <text()>']
+    name (unique): <text()>
+    slug (unique): <text()>
 
-    status_not_assigned (extends status):
-        name (unique): "Non assignée"
-        slug (unique): "not-assigned"
-        description: Lorsqu'aucun participant n'est assigné à l'intervention.
-    status_to_do (extends status):
-        name (unique): "À faire"
-        slug (unique): "to-do"
-        description: Lorsque l'intervention est à faire.
-    status_in_progress (extends status):
-        name (unique): "En cours"
-        slug (unique): "in-progress"
-        description: Lorsque l'intervention est en cours.
-    status_blocked (extends status):
-        name (unique): "Bloquée"
-        slug (unique): "blocked"
-        description: Lorsque l'intervention bloquée.
-    status_finished (extends status):
-        name (unique): "Terminée"
-        slug (unique): "finished"
-        description: Lorsque l'intervention est terminée.
+  status_not_assigned (extends status):
+    name (unique): 'Non assignée'
+    slug (unique): 'not-assigned'
+    description: Lorsqu'aucun participant n'est assigné à l'intervention.
+  status_to_do (extends status):
+    name (unique): 'À faire'
+    slug (unique): 'to-do'
+    description: Lorsque l'intervention est à faire.
+  status_in_progress (extends status):
+    name (unique): 'En cours'
+    slug (unique): 'in-progress'
+    description: Lorsque l'intervention est en cours.
+  status_blocked (extends status):
+    name (unique): 'Bloquée'
+    slug (unique): 'blocked'
+    description: Lorsque l'intervention bloquée.
+  status_finished (extends status):
+    name (unique): 'Terminée'
+    slug (unique): 'finished'
+    description: Lorsque l'intervention est terminée.

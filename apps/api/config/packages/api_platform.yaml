@@ -1,7 +1,7 @@
 api_platform:
-    show_webby: false
-    swagger:
-         api_keys:
-             JWT:
-                name: Authorization
-                type: header
+  show_webby: false
+  swagger:
+    api_keys:
+      JWT:
+        name: Authorization
+        type: header

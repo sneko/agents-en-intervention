@@ -1,15 +1,13 @@
 {
-    "$schema": "https://raw.githubusercontent.com/infection/infection/0.26.18/resources/schema.json",
-    "source": {
-        "directories": [
-            "./src/"
-        ]
-    },
-    "phpUnit": {
-        "configDir": "./",
-        "customPath": "./tools/phpunit"
-    },
-    "logs": {
-        "html": "./ci/infection/infection.html"
-    }
+  "$schema": "https://raw.githubusercontent.com/infection/infection/0.26.18/resources/schema.json",
+  "source": {
+    "directories": ["./src/"]
+  },
+  "phpUnit": {
+    "configDir": "./",
+    "customPath": "./tools/phpunit"
+  },
+  "logs": {
+    "html": "./ci/infection/infection.html"
+  }
 }

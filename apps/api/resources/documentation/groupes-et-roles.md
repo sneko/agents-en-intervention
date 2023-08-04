@@ -1,9 +1,11 @@
 # Groupes et rôles
 
-##  Les groupes
+## Les groupes
 
 ### Agent
+
 Un agent du service technique peut :
+
 - voir la liste des interventions qui lui sont affectées;
 - voir le détail d'une intervention qui lui est affectée;
 - créer une intervention sans l'affecter;
@@ -12,7 +14,9 @@ Un agent du service technique peut :
 - changer le statut d'une intervention.
 
 ### Direction
+
 Un directeur de service technique peut :
+
 - voir toutes les interventions;
 - ajouter une intervention;
 - modifier une intervention;
@@ -20,5 +24,7 @@ Un directeur de service technique peut :
 - supprimer une intervention.
 
 ### Élu
+
 Un élu peut :
+
 - tout voir (il n'a qu'un rôle de mesure de l'action).
