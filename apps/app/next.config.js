@@ -57,7 +57,7 @@ const moduleExports = async () => {
     experimental: {
       appDir: true,
       outputFileTracingRoot: path.join(__dirname, '../../'),
-      swcPlugins: [[{ excluded: [] }]],
+      swcPlugins: [],
     },
     async rewrites() {
       return [
