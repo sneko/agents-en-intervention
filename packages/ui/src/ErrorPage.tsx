@@ -6,7 +6,6 @@ import Grid from '@mui/material/Grid';
 import NextLink from 'next/link';
 import React from 'react';
 
-import { useLiveChat } from '@aei/app/src/components/live-chat/useLiveChat';
 import { centeredErrorContainerGridProps } from '@aei/app/src/utils/grid';
 import { linkRegistry } from '@aei/app/src/utils/routes/registry';
 
@@ -102,10 +101,8 @@ export const error500Props: ErrorPageProps = {
   description: () => <>Désolé, le service rencontre un problème, nous travaillons pour le résoudre le plus rapidement possible.</>,
   buttons: [
     () => {
-      const { showLiveChat, isLiveChatLoading } = useLiveChat();
-
       return (
-        <Button onClick={showLiveChat} loading={isLiveChatLoading} size="large" variant="contained">
+        <Button onClick={() => {}} size="large" variant="contained">
           Contactez-nous
         </Button>
       );

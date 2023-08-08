@@ -6,7 +6,6 @@ import { PropsWithChildren } from 'react';
 import { createContext, useContext } from 'react';
 import { I18nextProvider } from 'react-i18next';
 
-import { ClientProvider } from '@aei/app/src/client/trpcClient';
 import { dateFnsLocales, i18n } from '@aei/app/src/i18n';
 import { SessionProvider } from '@aei/app/src/proxies/next-auth/react';
 import { ModalProvider } from '@aei/ui/src/modal/ModalProvider';
@@ -23,13 +22,11 @@ export function Providers(props: PropsWithChildren) {
 
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={dateFnsLocales[i18n.language]}>
-      <ClientProvider>
-        <I18nextProvider i18n={i18n}>
-          <ModalProvider>
-            <ContextualSessionProvider>{props.children}</ContextualSessionProvider>
-          </ModalProvider>
-        </I18nextProvider>
-      </ClientProvider>
+      <I18nextProvider i18n={i18n}>
+        <ModalProvider>
+          <ContextualSessionProvider>{props.children}</ContextualSessionProvider>
+        </ModalProvider>
+      </I18nextProvider>
     </LocalizationProvider>
   );
 }

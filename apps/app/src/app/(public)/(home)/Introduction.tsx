@@ -5,12 +5,9 @@ import Image from 'next/image';
 import * as React from 'react';
 
 import hero from '@aei/app/public/assets/home/hero.png';
-import { useLiveChat } from '@aei/app/src/components/live-chat/useLiveChat';
 import { IntroductionContainer } from '@aei/ui/src/IntroductionContainer';
 
 export function Introduction() {
-  const { showLiveChat, isLiveChatLoading } = useLiveChat();
-
   return (
     <IntroductionContainer
       left={
@@ -27,7 +24,7 @@ export function Introduction() {
           <Typography color="text.secondary" sx={{ mb: 3, maxWidth: 500 }}>
             Médiature est un service destiné aux médiateurs pour faciliter les démarches entre les usagers et les collectivités.
           </Typography>
-          <Button onClick={showLiveChat} loading={isLiveChatLoading} size="large" variant="contained" sx={{ mb: 3 }}>
+          <Button onClick={() => {}} size="large" variant="contained" sx={{ mb: 3 }}>
             Demander une démonstration
           </Button>
         </Box>

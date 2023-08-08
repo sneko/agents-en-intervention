@@ -10,11 +10,8 @@ import IconButton from '@mui/material/IconButton';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-import { useLiveChat } from '@aei/app/src/components/live-chat/useLiveChat';
-
 export function Contact() {
   const theme = useColors();
-  const { showLiveChat, isLiveChatLoading } = useLiveChat();
 
   return (
     <Container
@@ -44,7 +41,7 @@ export function Contact() {
               <Typography color="text.secondary" sx={{ mb: 2 }}>
                 Si vous souhaitez en savoir plus sur le service ou rencontrez un problème, une messagerie est à votre disposition.
               </Typography>
-              <Button onClick={showLiveChat} loading={isLiveChatLoading} size="large" variant="contained">
+              <Button onClick={() => {}} size="large" variant="contained">
                 Nous écrire
               </Button>
             </Box>

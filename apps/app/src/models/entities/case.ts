@@ -3,7 +3,6 @@ import z from 'zod';
 import { AgentSchema } from '@aei/app/src/models/entities/agent';
 import { AttachmentSchema, UiAttachmentSchema } from '@aei/app/src/models/entities/attachment';
 import { CitizenSchema } from '@aei/app/src/models/entities/citizen';
-import { EditorStateSchema } from '@aei/app/src/models/entities/lexical';
 
 export const CasePlatformSchema = z.enum(['OFFICE', 'MAIL', 'PHONE', 'EMAIL', 'WEB']);
 export type CasePlatformSchemaType = z.infer<typeof CasePlatformSchema>;
@@ -112,7 +111,7 @@ export const CaseNoteSchema = z
     id: z.string().uuid(),
     caseId: z.string().uuid(),
     date: z.date(), // TODO: not a timestamp, should be a date (or maybe not? Hours matter?)
-    content: EditorStateSchema,
+    content: z.string(),
     createdAt: z.date(),
     updatedAt: z.date(),
     deletedAt: z.date().nullable(),

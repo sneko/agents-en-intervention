@@ -9,7 +9,6 @@ import { StartDsfr } from '@aei/app/src/app/StartDsfr';
 import { WorkboxManager } from '@aei/app/src/app/WorkboxManager';
 import '@aei/app/src/app/layout.scss';
 import { Providers } from '@aei/app/src/app/providers';
-import { LiveChatProvider } from '@aei/app/src/components/live-chat/LiveChatProvider';
 import { defaultColorScheme } from '@aei/app/src/utils/dsfr';
 
 export interface RootLayoutProps {
@@ -28,9 +27,7 @@ function MainStructure(props: PropsWithChildren) {
       <body>
         <DsfrProvider defaultColorScheme={defaultColorScheme}>
           <MuiDsfrThemeProvider>
-            <Providers>
-              <LiveChatProvider>{props.children}</LiveChatProvider>
-            </Providers>
+            <Providers>{props.children}</Providers>
           </MuiDsfrThemeProvider>
           <Display />
         </DsfrProvider>

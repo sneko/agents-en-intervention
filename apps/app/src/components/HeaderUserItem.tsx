@@ -14,7 +14,6 @@ import { EventEmitter } from 'eventemitter3';
 import NextLink from 'next/link';
 import { PropsWithChildren, useEffect, useState } from 'react';
 
-import { useLiveChat } from '@aei/app/src/components/live-chat/useLiveChat';
 import { TokenUserSchemaType } from '@aei/app/src/models/entities/user';
 import { logout } from '@aei/app/src/utils/auth';
 import { linkRegistry } from '@aei/app/src/utils/routes/registry';
@@ -28,8 +27,6 @@ export interface HeaderUserItemProps {
 }
 
 export function HeaderUserItem(props: PropsWithChildren<HeaderUserItemProps>) {
-  const { showLiveChat } = useLiveChat();
-
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const open = Boolean(anchorEl);
   const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -90,7 +87,7 @@ export function HeaderUserItem(props: PropsWithChildren<HeaderUserItemProps>) {
             </ListItemIcon>
             Mon compte
           </MenuItem>
-          <MenuItem onClick={showLiveChat}>
+          <MenuItem onClick={() => {}}>
             <ListItemIcon>
               <HelpOutlineIcon fontSize="small" />
             </ListItemIcon>

@@ -14,7 +14,6 @@ import {
 } from '@aei/app/src/models/entities/case';
 import { CitizenSchema } from '@aei/app/src/models/entities/citizen';
 import { emptyStringtoNullPreprocessor } from '@aei/app/src/models/entities/common';
-import { EditorStateInputSchema } from '@aei/app/src/models/entities/lexical';
 import { PhoneInputSchema, emptyPhonetoNullPreprocessor } from '@aei/app/src/models/entities/phone';
 
 export const requestCaseAttachmentsMax = 10;
@@ -260,7 +259,7 @@ export const AddNoteToCaseSchema = z
   .object({
     caseId: incompleteCaseSchema.shape.id,
     date: CaseNoteSchema.shape.date,
-    content: EditorStateInputSchema,
+    content: z.string(),
   })
   .strict();
 export type AddNoteToCaseSchemaType = z.infer<typeof AddNoteToCaseSchema>;
@@ -282,7 +281,7 @@ export const UpdateCaseNoteSchema = z
   .object({
     noteId: CaseNoteSchema.shape.id,
     date: CaseNoteSchema.shape.date,
-    content: EditorStateInputSchema,
+    content: z.string(),
   })
   .strict();
 export type UpdateCaseNoteSchemaType = z.infer<typeof UpdateCaseNoteSchema>;
