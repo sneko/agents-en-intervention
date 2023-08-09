@@ -21,7 +21,7 @@ export function Feature(props: FeatureProps) {
       disableGutters
       sx={{
         bgcolor: props.bgcolor,
-        py: { xs: 3, md: 4 },
+        py: { xs: 3, md: 3 },
       }}
     >
       <Container>
@@ -86,7 +86,7 @@ export function Feature(props: FeatureProps) {
               alignItems: 'center',
             }}
           >
-            <Typography component="h2" variant="h5" sx={{ width: '100%', mb: 2 }}>
+            <Typography component="h2" variant="h3" sx={{ width: '100%', mb: 2 }}>
               {props.name}
             </Typography>
             <Typography variant="body2">{props.description}</Typography>

@@ -1,4 +1,3 @@
-import { useColors } from '@codegouvfr/react-dsfr/useColors';
 import Box, { BoxProps } from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
@@ -17,15 +16,15 @@ export function IntroductionContainer({
   rightSx?: BoxProps['sx'];
   containerMaxHeight?: any; // Tried to type `BoxProps['sx']['maxHeight']` but it's not working
 }) {
-  const theme = useColors();
-
-  const containerMaxHeightToUse = containerMaxHeight || { xs: 500, sm: 600, xl: 700 };
+  const containerMaxHeightToUse = containerMaxHeight || { xs: 500, sm: 550, xl: 600 };
 
   return (
     <Box
       sx={{
         overflow: 'hidden',
-        borderBottom: `1px solid ${theme.decisions.background.alt.grey.active}`,
+        // TODO: forced to use this color since I don't have the original image PDF with transparent bg
+        // bgcolor: theme.decisions.background.alt.grey.default,
+        bgcolor: '#edebfe',
       }}
     >
       <Container
@@ -36,7 +35,15 @@ export function IntroductionContainer({
           transition: '0.3s',
         }}
       >
-        <Grid container alignItems="center" wrap="nowrap" sx={{ height: '100%', mx: 'auto' }}>
+        <Grid
+          container
+          alignItems="center"
+          wrap="nowrap"
+          sx={{
+            height: '100%',
+            mx: 'auto',
+          }}
+        >
           <Grid item md={7} lg={6} sx={{ m: 'auto' }}>
             {left}
           </Grid>
@@ -51,7 +58,6 @@ export function IntroductionContainer({
                   alignItems: 'center',
                   px: '3vw',
                   py: '20px',
-                  bgcolor: theme.decisions.background.alt.grey.default,
                   minWidth: {
                     md: `${100 / (12 / 5)}vw`,
                     lg: `${100 / (12 / 6)}vw`,

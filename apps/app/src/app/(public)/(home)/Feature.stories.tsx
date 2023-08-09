@@ -1,8 +1,8 @@
 import { Meta, StoryFn } from '@storybook/react';
 
+import calendar from '@aei/app/public/assets/home/calendar.png';
+import { Feature } from '@aei/app/src/app/(public)/(home)/Feature';
 import { StoryHelperFactory } from '@aei/docs/.storybook/helpers';
-import toReplace from '@aei/app/public/assets/features/to_replace.png';
-import { Feature } from '@aei/app/src/app/(public)/features/Feature';
 
 type ComponentType = typeof Feature;
 const { generateMetaDefault, prepareStory } = StoryHelperFactory<ComponentType>();
@@ -21,7 +21,7 @@ const Template: StoryFn<ComponentType> = (args) => {
 
 const NormalStory = Template.bind({});
 NormalStory.args = {
-  image: toReplace,
+  image: calendar,
   imageAlt: ``,
   name: `Rerum iste veritatis`,
   description: (

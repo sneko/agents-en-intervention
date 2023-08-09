@@ -1,13 +1,13 @@
 import { Meta, StoryFn } from '@storybook/react';
 
-import { StoryHelperFactory } from '@aei/docs/.storybook/helpers';
 import { Features } from '@aei/app/src/app/(public)/(home)/Features';
+import { StoryHelperFactory } from '@aei/docs/.storybook/helpers';
 
 type ComponentType = typeof Features;
 const { generateMetaDefault, prepareStory } = StoryHelperFactory<ComponentType>();
 
 export default {
-  title: 'Components/Home/Features',
+  title: 'Pages/Features',
   component: Features,
   ...generateMetaDefault({
     parameters: {},

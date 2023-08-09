@@ -46,36 +46,7 @@ export function PublicLayout(props: PropsWithChildren) {
 
   return (
     <>
-      <Header
-        {...commonHeaderAttributes}
-        quickAccessItems={quickAccessItems}
-        navigation={[
-          {
-            isActive: hasPathnameThisMatch(pathname, homeLink),
-            linkProps: {
-              href: homeLink,
-              target: '_self',
-            },
-            text: 'Accueil',
-          },
-          {
-            isActive: hasPathnameThisMatch(pathname, featuresLink),
-            linkProps: {
-              href: featuresLink,
-              target: '_self',
-            },
-            text: 'Fonctionnalités',
-          },
-          {
-            isActive: hasPathnameThisMatch(pathname, aboutUsLink),
-            linkProps: {
-              href: aboutUsLink,
-              target: '_self',
-            },
-            text: 'Qui sommes-nous ?',
-          },
-        ]}
-      />
+      <Header {...commonHeaderAttributes} quickAccessItems={quickAccessItems} />
       <ContentWrapper>{props.children}</ContentWrapper>
       <Footer {...commonFooterAttributes} />
     </>

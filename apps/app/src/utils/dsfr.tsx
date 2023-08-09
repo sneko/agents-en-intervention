@@ -62,8 +62,8 @@ export const userQuickAccessItem = (user: TokenUserSchemaType, options?: UserQui
 export const commonHeaderAttributes = {
   brandTop: brandTop,
   homeLinkProps: homeLinkProps,
-  serviceTitle: 'Médiature',
-  serviceTagline: 'Service public de médiation',
+  serviceTitle: 'Agents en intervention',
+  serviceTagline: 'Service public de planification',
 };
 
 export const commonFooterAttributes = {
@@ -74,7 +74,13 @@ export const commonFooterAttributes = {
     href: '/accessibilite',
   },
   brandTop: brandTop,
-  contentDescription: 'Ce site est géré par les collectivités.',
+  contentDescription: (
+    <>
+      Agents en intervention est un service de l'
+      <a href="https://anct.gouv.fr/">Agence Nationale de la Cohésion des Territoires</a> développé par l'
+      <a href="https://incubateur.anct.gouv.fr/">Incubateur des Territoires</a>.
+    </>
+  ),
   homeLinkProps: homeLinkProps,
   termsLinkProps: {
     // href: linkRegistry.get('legalNotice', undefined),
