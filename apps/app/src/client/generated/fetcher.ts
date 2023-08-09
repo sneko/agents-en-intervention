@@ -1,6 +1,7 @@
+import { getBaseUrl } from '@aei/app/src/utils/url';
 import { Context } from './context';
 
-const baseUrl = '/';
+const baseUrl = getBaseUrl();
 
 export type ErrorWrapper<TError> = TError | { status: 'unknown'; payload: string };
 
@@ -38,7 +39,7 @@ export async function fetch<
       delete requestHeaders['Content-Type'];
     }
 
-    const response = await window.fetch(`${baseUrl}${resolveUrl(url, queryParams, pathParams)}`, {
+    const response = await window.fetch(resolveUrl(url, queryParams, pathParams), {
       signal,
       method: method.toUpperCase(),
       body: body ? (body instanceof FormData ? body : JSON.stringify(body)) : undefined,
@@ -77,5 +78,8 @@ export async function fetch<
 const resolveUrl = (url: string, queryParams: Record<string, string> = {}, pathParams: Record<string, string> = {}) => {
   let query = new URLSearchParams(queryParams).toString();
   if (query) query = `?${query}`;
-  return url.replace(/\{\w*\}/g, (key) => pathParams[key.slice(1, -1)]) + query;
+
+  const pathname = url.replace(/\{\w*\}/g, (key) => pathParams[key.slice(1, -1)]) + query;
+
+  return `${getBaseUrl()}${pathname}`;
 };
