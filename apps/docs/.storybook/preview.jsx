@@ -1,26 +1,23 @@
 import { DsfrHead } from '@codegouvfr/react-dsfr/next-appdir/DsfrHead';
 import { DsfrProvider } from '@codegouvfr/react-dsfr/next-appdir/DsfrProvider';
 import { withLinks } from '@storybook/addon-links';
-import addons from '@storybook/addons';
 import { configure as testingConfigure } from '@storybook/testing-library';
 import { themes } from '@storybook/theming';
 import { withMockAuth } from '@tomfreudenberg/next-auth-mock/storybook';
 import { initialize, mswDecorator } from 'msw-storybook-addon';
 import React, { useEffect } from 'react';
-import { I18nextProvider } from 'react-i18next';
 
-import { MockProvider } from '@aei/docs/.storybook/MockProvider';
-import { ThemedDocsContainer } from '@aei/docs/.storybook/ThemedDocsContainer';
 // import { DARK_MODE_EVENT_NAME, UPDATE_DARK_MODE_EVENT_NAME } from 'storybook-dark-mode';
-import { disableGlobalDsfrStyle } from '@aei/docs/.storybook/helpers';
-import '@aei/docs/.storybook/layout.scss';
-import { withDisablingTestRunner } from '@aei/docs/.storybook/testing';
 import { MuiDsfrThemeProvider } from '@aei/app/src/app/MuiDsfrThemeProvider';
 // import { useDarkMode } from 'storybook-dark-mode';
 import { StartDsfr } from '@aei/app/src/app/StartDsfr';
 import { Providers } from '@aei/app/src/app/providers';
 import { i18n } from '@aei/app/src/i18n';
-import { StorybookRendererLayout } from '@aei/ui/src/emails/layouts/storybook-renderer';
+import { MockProvider } from '@aei/docs/.storybook/MockProvider';
+import { ThemedDocsContainer } from '@aei/docs/.storybook/ThemedDocsContainer';
+import { disableGlobalDsfrStyle } from '@aei/docs/.storybook/helpers';
+import '@aei/docs/.storybook/layout.scss';
+import { withDisablingTestRunner } from '@aei/docs/.storybook/testing';
 import '@aei/ui/src/fonts/index.css';
 
 // const channel = addons.getChannel();
@@ -143,7 +140,6 @@ export const decorators = [
     useEffect(() => {
       i18n.changeLanguage(locale);
     }, [locale]);
-
 
     disableGlobalDsfrStyle(false); // Workaround for global style leaking
 
