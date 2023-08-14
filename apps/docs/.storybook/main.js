@@ -24,7 +24,6 @@ module.exports = {
     '@storybook/addon-interactions',
     '@storybook/addon-links',
     '@storybook/addon-measure',
-    // '@storybook/addon-notes', // TODO: enable a new time, but for now seems uncompatible with Storybook v7
     '@storybook/addon-viewport',
     'storybook-addon-designs',
     'storybook-addon-pseudo-states',
