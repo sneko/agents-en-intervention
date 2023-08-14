@@ -51,9 +51,9 @@ module.exports = {
   },
   env: (config) => ({
     ...config,
+    API_SERVER_MOCK: 'true',
     ENABLE_MOCKS: 'true',
     STORYBOOK_ENVIRONMENT: 'true',
-    TRPC_SERVER_MOCK: 'true',
   }),
   async webpackFinal(config, { configType }) {
     // When building Storybook from scratch assets are copied into the `outputDir` before `CopyWebpackPlugin` builds the `/public/` folder

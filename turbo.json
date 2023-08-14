@@ -47,6 +47,7 @@
     }
   },
   "globalEnv": [
+    "API_SERVER_MOCK",
     "APP_BASE_URL",
     "APP_MODE",
     "CI",

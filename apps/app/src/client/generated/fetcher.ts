@@ -1,7 +1,8 @@
 import { getBaseUrl } from '@aei/app/src/utils/url';
 import { Context } from './context';
+import { mockBaseUrl, shouldTargetMock } from '@aei/app/src/client/mock/environment';
 
-const baseUrl = getBaseUrl();
+const baseUrl = shouldTargetMock() ? mockBaseUrl : getBaseUrl();
 
 export type ErrorWrapper<TError> = TError | { status: 'unknown'; payload: string };
 
@@ -81,5 +82,5 @@ const resolveUrl = (url: string, queryParams: Record<string, string> = {}, pathP
 
   const pathname = url.replace(/\{\w*\}/g, (key) => pathParams[key.slice(1, -1)]) + query;
 
-  return `${getBaseUrl()}${pathname}`;
+  return `${baseUrl}${pathname}`;
 };
