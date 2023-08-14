@@ -20,12 +20,11 @@ module.exports = {
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-coverage',
-    '@storybook/addon-essentials',
+    '@storybook/addon-designs',
     '@storybook/addon-interactions',
     '@storybook/addon-links',
     '@storybook/addon-measure',
     '@storybook/addon-viewport',
-    'storybook-addon-designs',
     'storybook-addon-pseudo-states',
     'storybook-dark-mode',
   ],
@@ -201,6 +200,7 @@ module.exports = {
   },
   docs: {
     docsPage: true,
-    autodocs: true,
+    autodocs: false,
+    defaultName: 'Docs',
   },
 };
