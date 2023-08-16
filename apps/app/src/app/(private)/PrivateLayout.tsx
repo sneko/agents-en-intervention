@@ -1,14 +1,14 @@
 'use client';
 
-import { Footer } from '@codegouvfr/react-dsfr/Footer';
-import { Header } from '@codegouvfr/react-dsfr/Header';
+import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import { usePathname, useRouter } from 'next/navigation';
-import { PropsWithChildren, useEffect, useState } from 'react';
+import { PropsWithChildren, useCallback, useEffect, useState } from 'react';
 
 import { useApiUsersUserIdinterventionsGetCollection } from '@aei/app/src/client/generated/components';
+import { SideNav } from '@aei/app/src/components/SideNav';
+import { TopNav, sideNavWidth } from '@aei/app/src/components/TopNav';
 import { signIn, useSession } from '@aei/app/src/proxies/next-auth/react';
-import { commonFooterAttributes, commonHeaderAttributes } from '@aei/app/src/utils/dsfr';
 import { centeredAlertContainerGridProps } from '@aei/app/src/utils/grid';
 import { ErrorAlert } from '@aei/ui/src/ErrorAlert';
 import { LoadingArea } from '@aei/ui/src/LoadingArea';
@@ -19,6 +19,7 @@ export function PrivateLayout(props: PropsWithChildren) {
   const pathname = usePathname();
   const sessionWrapper = useSession();
   const [logoutCommitted, setLogoutCommitted] = useState(false);
+  const [openNav, setOpenNav] = useState(false);
 
   const { data, error, isLoading, refetch } = useApiUsersUserIdinterventionsGetCollection({
     pathParams: {
@@ -27,6 +28,12 @@ export function PrivateLayout(props: PropsWithChildren) {
   });
 
   const testTodo = data;
+
+  useEffect(() => {
+    if (openNav) {
+      setOpenNav(false);
+    }
+  }, [pathname]);
 
   useEffect(() => {
     if (sessionWrapper.status === 'unauthenticated' && !logoutCommitted) {
@@ -46,9 +53,29 @@ export function PrivateLayout(props: PropsWithChildren) {
 
   return (
     <>
-      <Header {...commonHeaderAttributes} />
-      <ContentWrapper>{props.children}</ContentWrapper>
-      <Footer {...commonFooterAttributes} />
+      <TopNav onNavOpen={() => setOpenNav(true)} />
+      <SideNav onClose={() => setOpenNav(false)} open={openNav} />
+      <Box
+        sx={(theme) => ({
+          display: 'flex',
+          flex: '1 1 auto',
+          maxWidth: '100%',
+          [theme.breakpoints.up('lg')]: {
+            paddingLeft: sideNavWidth,
+          },
+        })}
+      >
+        <Box
+          sx={{
+            display: 'flex',
+            flex: '1 1 auto',
+            flexDirection: 'column',
+            width: '100%',
+          }}
+        >
+          <ContentWrapper>{props.children}</ContentWrapper>
+        </Box>
+      </Box>
     </>
   );
 }
