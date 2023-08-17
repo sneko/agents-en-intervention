@@ -5,7 +5,7 @@ import { UserPasswordSchema, UserSchema, VerificationTokenSchema } from '@aei/ap
 
 export const SignInSchema = z
   .object({
-    email: UserSchema.shape.email,
+    username: z.string().min(1),
     password: z.string().min(1), // Complex validation is done with `UserPasswordSchema` when mutating the password
     rememberMe: z.boolean(),
   })

@@ -1,6 +1,8 @@
 import { isBrowser } from './platform';
 
 export function getBaseUrl() {
+  return 'https://api.agents-intervention.dev.incubateur.anct.gouv.fr';
+
   if (process.env.APP_BASE_URL) {
     return process.env.APP_BASE_URL;
   } else if (process.env.NEXT_PUBLIC_APP_BASE_URL) {

@@ -75,14 +75,14 @@ const moduleExports = async () => {
     async headers() {
       // Order matters, less precise to more precise (it's weird since the opposite of others... but fine)
       return [
-        {
-          source: '/:path*', // All routes
-          headers: nextjsSecurityHeaders,
-        },
-        {
-          source: '/assets/:path*', // Assets routes
-          headers: nextjsAssetsSecurityHeaders,
-        },
+        // {
+        //   source: '/:path*', // All routes
+        //   headers: nextjsSecurityHeaders,
+        // },
+        // {
+        //   source: '/assets/:path*', // Assets routes
+        //   headers: nextjsAssetsSecurityHeaders,
+        // },
       ];
     },
     images: {
